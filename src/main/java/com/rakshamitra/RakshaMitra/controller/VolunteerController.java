@@ -69,7 +69,7 @@ public class VolunteerController {
         }
     }
 
-    @GetMapping("/admin/students/pending")
+    @GetMapping("/college/students/pending")
     public String showPendingVolunteers(Model model) {
         model.addAttribute("pendingVolunteers", volunteerService.getPendingVolunteers());
         return "admin_pending_volunteers";

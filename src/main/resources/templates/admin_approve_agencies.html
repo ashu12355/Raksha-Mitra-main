@@ -1,13 +1,13 @@
 <h1>Approve Rescue Agencies</h1>
 <table>
     <tr>
-        <th>Agency Name</th>
-        <th>Contact Person</th>
+        <th>College Name</th>
+        <th>College Contact Person</th>
         <th>Actions</th>
     </tr>
     <tr th:each="agency : ${agencies}">
-        <td th:text="${agency.agencyName}"></td>
-        <td th:text="${agency.contactPersonName}"></td>
+        <td th:text="${agency.collegeName}"></td>
+        <td th:text="${agency.collegePersonName}"></td>
         <td>
             <form th:action="@{/admin/approve_agencies}" method="post">
                 <input type="hidden" th:value="${agency.id}" name="agencyId"/>

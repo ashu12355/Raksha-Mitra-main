@@ -1,89 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .dashboard {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .logout {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div class="dashboard">
-        <h1>Welcome, {{ agency.agencyName }}</h1>
-        <h2>Your Details:</h2>
-        <table>
-            <tr>
-                <th>Contact Person</th>
-                <td>{{ agency.contactPersonName }}</td>
-            </tr>
-            <tr>
-                <th>Contact Number</th>
-                <td>{{ agency.contactNumber }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ agency.email }}</td>
-            </tr>
-            <tr>
-                <th>Location</th>
-                <td>{{ agency.agencyLocation }}</td>
-            </tr>
-            <tr>
-                <th>Specialization</th>
-                <td>{{ agency.specialization }}</td>
-            </tr>
-            <tr>
-                <th>Team Size</th>
-                <td>{{ agency.teamSize }}</td>
-            </tr>
-            <tr>
-                <th>Availability</th>
-                <td>{{ agency.availability }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ agency.description }}</td>
-            </tr>
-        </table>
-        <a class="logout" href="/logout">Logout</a>
-    </div>
-</body>
-</html>
+<h1>
+
+    <h2>
+        College Dashboard
+    </h2>
+    <ul>
+        <li>
+            <a class="logout" href="/logout">Logout</a>
+        </li>
+        <li>
+            <li><a href="/college/students/pending">Approve Students</a></li>
+        </li>
+    </ul>
+   
+    
+</h1>

@@ -42,9 +42,7 @@
         </div>
     
         <div class="volunteer_regform_container content_width">
-            <div class="volunteer_reg_logo box15">
-                <img th:src="@{/images/Reg_Rescue_Agency.png}" alt="Register Logo">
-            </div>
+            
     
             <div class="volunteer_reg_form box15">
                 <form th:action="@{/student/register}" method="POST">
@@ -71,21 +69,20 @@
                     </div>
     
                     <div class="volunteer_innerform">
-                        <label for="latitude">Enter Location (Latitude)</label>
-                        <input type="text" id="latitude" name="latitude" placeholder="Enter Latitude*" required>
-    
-                        <label for="longitude">Enter Location (Longitude)</label>
-                        <input type="text" id="longitude" name="longitude" placeholder="Enter Longitude*" required>
+                        
     
                         <label for="areaOfExpertise">Area of Expertise</label>
                         <select id="areaOfExpertise" name="areaOfExpertise" required>
                             <option value="">Select Specialization*</option>
-                            <option value="Search and Rescue">Search and Rescue</option>
-                            <option value="Medical Aid">Medical Aid</option>
-                            <option value="Firefighting">Firefighting</option>
-                            <option value="Logistics">Logistics</option>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="C++">C++</option>
+                            <option value="DataScience">Data Science</option>
+                            <option value="WebDevelopment">Web Development</option>
+                            <option value="MachineLearning">Machine Learning</option>
                             <option value="Others">Others</option>
-                        </select>
+                        </select>                        
     
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Create A Password*" required>
@@ -95,12 +92,6 @@
                     </div>
     
                     <div class="volunteer_innerform">
-                        <label for="availability">Availability</label>
-                        <select id="availability" name="availability" required>
-                            <option value="">Select Availability*</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
     
                         <label for="description">Description</label>
                         <textarea id="description" name="description" rows="6" placeholder="Additional information or special requirements and Past Experience*"></textarea>
