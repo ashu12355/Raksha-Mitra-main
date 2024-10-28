@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "rescue_agencies")
+@Table(name = "college")
 @Builder
 @Getter
 @Setter
@@ -23,19 +23,14 @@ public class RescueAgency {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String agencyName;
-    private String contactPersonName;
+    private String collegeName;
+    private String collegePersonName;
     private String contactNumber;
     private String email;
     private String password;
     private String confirmPassword;
-    private String agencyLocation;
-    private double latitude;
-    private double longitude;
-    private String specialization;
-    private int teamSize;
-    private String availability;
-    private String description;
+    private String collegeAddress;
+    private String city;
+    private String state;
     private boolean approved = false;
-
 }

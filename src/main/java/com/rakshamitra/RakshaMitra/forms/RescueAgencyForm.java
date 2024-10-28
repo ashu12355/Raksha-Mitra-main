@@ -1,8 +1,6 @@
 package com.rakshamitra.RakshaMitra.forms;
 
-import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -22,13 +20,11 @@ import lombok.ToString;
 @ToString
 public class RescueAgencyForm {
 
-    @NotBlank(message = "Username is required")
-    @Size(min = 5, message = "Minimum 5 characters")
-    @Pattern(regexp = "^[a-zA-Z\\s]*$", message = "Username must not contain numbers or special characters")
-    private String agencyName;
+    @NotBlank(message = "College Name is required")
+    private String collegeName;
 
-    @NotBlank(message = "Contact Person Name is required")
-    private String contactPersonName;
+    @NotBlank(message = "College Person Name is required")
+    private String collegePersonName;
 
     @Size(min = 10, max = 10)
     @NotBlank
@@ -46,28 +42,13 @@ public class RescueAgencyForm {
     @NotBlank(message = "Confirm Password is required")
     private String confirmPassword;
 
-    @NotBlank(message = "Agency Location is required")
-    private String agencyLocation;
+    @NotBlank(message = "College Address is required")
+    private String collegeAddress;
 
-    @NotNull(message = "Latitude is required")
-    private Double latitude;
+    @NotNull(message = "City is required")
+    private String city;
 
-    @NotNull(message = "Longitude is required")
-    private Double longitude;
-
-
-    @NotBlank(message = "Specialization is required")
-    private String specialization;
-
-    @Digits(integer = 2, fraction = 0, message = "Team Size must be a non-negative integer")
-    @Min(value = 0, message = "Team Size must be at least 0")
-    private Integer teamSize;
-
-    @NotBlank(message = "Availability is required")
-    private String availability;
-
-    @NotBlank(message = "Description is required")
-    private String description;
-
+    @NotNull(message = "State is required")
+    private String state;
     private boolean approved;
 }

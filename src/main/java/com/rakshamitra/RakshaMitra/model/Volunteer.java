@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "volunteers")
+@Table(name = "student")
 public class Volunteer {
 
     @Id
@@ -19,14 +19,12 @@ public class Volunteer {
     private LocalDate dob;
     private String gender;
     private String email;
-    private double latitude;
-    private double longitude;
     private String areaOfExpertise;
     private String password;
-    private boolean availability;
+    private String confirmPassword;
     private String description;
     private boolean isApproved = false;
-
+    
     public Long getId() {
         return id;
     }
@@ -63,18 +61,6 @@ public class Volunteer {
     public void setEmail(String email) {
         this.email = email;
     }
-    public double getLatitude() {
-        return latitude;
-    }
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
-    public double getLongitude() {
-        return longitude;
-    }
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
     public String getAreaOfExpertise() {
         return areaOfExpertise;
     }
@@ -87,11 +73,11 @@ public class Volunteer {
     public void setPassword(String password) {
         this.password = password;
     }
-    public boolean isAvailability() {
-        return availability;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
     public String getDescription() {
         return description;
@@ -106,6 +92,6 @@ public class Volunteer {
         this.isApproved = isApproved;
     }
 
- 
+    
     
 }
