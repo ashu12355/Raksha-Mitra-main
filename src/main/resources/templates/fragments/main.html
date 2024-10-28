@@ -14,30 +14,17 @@
 <main xmlns:th="http://www.thymeleaf.org" th:fragment="mainFragment" class="main full_width">
     <section class="main_section content_width">
         <div class="main_content box2">
-            <h2>Welcome to RakshaMitra</h2>
-            <h2>National Disaster Response Force</h2>
-            <h4>RakshaMitra: Instant Alerts, Immediate Action.</h4>
-            <p>RakshaMitra is your trusted partner in real-time disaster response. With cutting-edge technology, we
-                aggregate and analyze crucial data from multiple sources, ensuring that the right information
-                reaches the right hands at the right time. Our platform empowers disaster management teams to act
-                swiftly and effectively, safeguarding lives and communities.</p>
-            <div class="rd_v_btn">
-                <a th:href="@{/reportDisaster}" class="rbtn">Report Disaster <i
-                        class="fa-solid fa-circle-chevron-right" style="color: #214a91;"></i></a>
-                <a th:href="@{/student/login}" class="rbtn">Become A Volunteer<i
-                        class="fa-solid fa-circle-chevron-right" style="color: #214a91;"></i> </a>
-            </div>
-            
-        </div>
+            <h2>Welcome to CampusCircuit</h2>
+            <h2>Your portal to intercollege tech events and networking!</h2>
+            <h4>CampusCircuit:Bridging Campuses for Tomorrow’s Innovators.</h4>
+            <p>CampusCircuit connects tech-enthusiast students and colleges, making it easier than ever to explore and join hackathons, workshops, seminars, and more. With just a few clicks, stay updated on upcoming events, collaborate with peers, and discover learning opportunities beyond your campus.</p>
+          
 
-        <div class="main_box box2">
-            <div class="t_box">
-                <h3>Find your Local Rescue</h3>
-                <h6>Find your local Rescue, Volunteer, Shelter.</h6>
-                <input type="text" placeholder="Enter Hashtag" required>
-                <p>Get Hashtag</p>
-                <input type="submit">
-            </div>
+        </div>
+            
+
+        <div class="main_logo box2">
+            <img th:src="@{/images/main_logo.png}" alt="">
         </div>
     </section>
 </main>
