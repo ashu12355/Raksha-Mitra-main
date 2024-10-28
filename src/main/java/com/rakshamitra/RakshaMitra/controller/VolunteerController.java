@@ -69,15 +69,15 @@ public class VolunteerController {
         }
     }
 
-    @GetMapping("/college/students/pending")
+    @GetMapping("/college/student/pending")
     public String showPendingVolunteers(Model model) {
         model.addAttribute("pendingVolunteers", volunteerService.getPendingVolunteers());
         return "admin_pending_volunteers";
     }
 
-    @PostMapping("/admin/student/approve/{id}")
+    @PostMapping("/college/student/approve/{id}")
     public String approveVolunteer(@PathVariable Long id) {
         volunteerService.approveVolunteer(id);
-        return "redirect:/admin/students/pending"; // Redirect back to pending volunteers
+        return "redirect:/college/student/pending"; // Redirect back to pending volunteers
     }
 }

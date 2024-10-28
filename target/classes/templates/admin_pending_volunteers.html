@@ -26,7 +26,7 @@
                 <td th:text="${volunteer.contactNumber}"></td>
                 <td th:text="${volunteer.areaOfExpertise}"></td>
                 <td>
-                    <form th:action="@{/admin/student/approve/{id}(id=${volunteer.id})}" method="post">
+                    <form th:action="@{/college/student/approve/{id}(id=${volunteer.id})}" method="post">
                         <button type="submit">Approve</button>
                     </form>
                 </td>
