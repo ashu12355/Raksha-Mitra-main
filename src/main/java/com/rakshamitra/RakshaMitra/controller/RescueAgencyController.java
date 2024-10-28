@@ -37,7 +37,6 @@ public class RescueAgencyController {
         }
         return "rescue_agency_login";
     }
-    
 
     @PostMapping("/college/login")
     public String agencyLogin(String email, String password, Model model) {
@@ -57,8 +56,8 @@ public class RescueAgencyController {
     }
 
     @RequestMapping(value = "/college/register", method = RequestMethod.POST)
-    public String registerAgency(@Valid @ModelAttribute RescueAgencyForm rescueAgencyForm, 
-                                  BindingResult bindingResult, HttpSession session) {
+    public String registerAgency(@Valid @ModelAttribute RescueAgencyForm rescueAgencyForm,
+            BindingResult bindingResult, HttpSession session) {
         // Validate the Form
         if (bindingResult.hasErrors()) {
             return "rescue_agency_reg";
@@ -66,28 +65,25 @@ public class RescueAgencyController {
 
         // Saving to database
         RescueAgency rescueAgency = new RescueAgency();
-        rescueAgency.setAgencyName(rescueAgencyForm.getAgencyName());
-        rescueAgency.setAgencyLocation(rescueAgencyForm.getAgencyLocation());
-        rescueAgency.setContactPersonName(rescueAgencyForm.getContactPersonName());
+
+        rescueAgency.setCollegeName(rescueAgencyForm.getCollegeName());
+        rescueAgency.setCollegePersonName(rescueAgencyForm.getCollegePersonName());
         rescueAgency.setContactNumber(rescueAgencyForm.getContactNumber());
         rescueAgency.setEmail(rescueAgencyForm.getEmail());
-        rescueAgency.setApproved(false);
-        rescueAgency.setAvailability(rescueAgencyForm.getAvailability());
         rescueAgency.setPassword(rescueAgencyForm.getPassword());
-        rescueAgency.setLatitude(rescueAgencyForm.getLatitude());
-        rescueAgency.setLongitude(rescueAgencyForm.getLongitude());
         rescueAgency.setConfirmPassword(rescueAgencyForm.getConfirmPassword());
-        rescueAgency.setSpecialization(rescueAgencyForm.getSpecialization());
-        rescueAgency.setDescription(rescueAgencyForm.getDescription());
-        rescueAgency.setTeamSize(rescueAgencyForm.getTeamSize());
+        rescueAgency.setCollegeAddress(rescueAgencyForm.getCollegeAddress());
+        rescueAgency.setCity(rescueAgencyForm.getCity());
+        rescueAgency.setState(rescueAgencyForm.getState());
+        rescueAgency.setApproved(rescueAgencyForm.isApproved());
 
         RescueAgency savedRescueAgency = rescueAgencyService.saveAgency(rescueAgency);
         if (savedRescueAgency == null) {
 
             Message fail = Message.builder()
-            .content("Email already exists!")
-            .type(MessageType.red)
-            .build();
+                    .content("Email already exists!")
+                    .type(MessageType.red)
+                    .build();
             session.setAttribute("message", fail); // Store the message in the session
 
             return "redirect:/college/register"; // Redirect to the registration page
@@ -95,9 +91,9 @@ public class RescueAgencyController {
 
         // Message for successful registration
         Message message = Message.builder()
-                                 .content("Registration Successful Wait For Admin Approval") // Fix the spelling mistake here
-                                 .type(MessageType.green)
-                                 .build();
+                .content("Registration Successful Wait For Admin Approval") // Fix the spelling mistake here
+                .type(MessageType.green)
+                .build();
         session.setAttribute("message", message); // Store the message in the session
 
         return "redirect:/college/login"; // Redirect to login page
@@ -106,7 +102,7 @@ public class RescueAgencyController {
     @PostMapping("/admin/approve_agencies")
     public String approveAgency(@RequestParam Long agencyId, Model model) {
         rescueAgencyService.approveAgency(agencyId);
-        model.addAttribute("message", "Agency approved successfully!");
+        model.addAttribute("message", "College Approved successfully!");
         return "redirect:/admin/approve_agencies";
     }
 
