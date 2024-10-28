@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+    <!-- <link rel="stylesheet" th:href="@{/css/loader.css}"> -->
+
+</head>
+
+<body>
+
+
+  
+    <!-- Header Section Starts Here -->
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+    <!--  Header Section Ends Here -->
+
+    <!-- Admin Page Starts Here  -->
+
+    <section class="logform full_width">
+        <div class="login_head"> 
+            <h1>Login</h1>
+        </div>
+        <div class="logform_container content_width">
+            <div class="l_logo box10">
+                <img th:src="@{/images/lm_logo.png}" alt="">
+            </div>
+            <div class="l_form box10">
+                <div class="ll"><img th:src="@{/images/l_logo.png}" alt=""></div>
+                <div class="btn_l">
+                    <a th:href="@{/admin/login}"><button>Admin Login</button></a>  
+                    <a th:href="@{/college/login}"><button>Rescue Agency Login</button></a>
+                    <a th:href="@{/student/login}"><button>Volunteer Login</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Page Ends Here  -->
+
+
+    <!-- Footer Section Starts Here  -->
+
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer Section Ends Here  -->
+
+    <script th:src="@{/js/res_nav.js}"></script>
+    <script th:src="@{/js/smooth.js}"></script>
+
+</body>
+
+</html>

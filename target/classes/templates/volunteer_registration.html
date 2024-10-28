@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <!-- Stylesheet -->
+ <link rel="stylesheet" th:href="@{/css/styles.css}">
+ <link rel="stylesheet" th:href="@{/css/style.css}">
+ <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+</head>
+
+
+<body>
+
+    <!-- Header Part Starts Here  -->
+
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+    <!-- Header Part Ends Here  -->
+
+
+
+    <!-- Volunteer Registration Starts Here  -->
+    
+    <section class="volunteer_regform full_width">
+        <div class="volunteer_lreg_head">
+            <h1>Volunteer Registration</h1>
+        </div>
+    
+        <div class="volunteer_regform_container content_width">
+            <div class="volunteer_reg_logo box15">
+                <img th:src="@{/images/Reg_Rescue_Agency.png}" alt="Register Logo">
+            </div>
+    
+            <div class="volunteer_reg_form box15">
+                <form th:action="@{/student/register}" method="POST">
+                    <div class="volunteer_innerform">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name*" required>
+    
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter Your Contact Number*" required>
+    
+                        <label for="dob">Choose DOB</label>
+                        <input type="date" id="dob" name="dob" required>
+    
+                        <label for="gender">Select Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Your Gender*</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+    
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address*" required>
+                    </div>
+    
+                    <div class="volunteer_innerform">
+                        <label for="latitude">Enter Location (Latitude)</label>
+                        <input type="text" id="latitude" name="latitude" placeholder="Enter Latitude*" required>
+    
+                        <label for="longitude">Enter Location (Longitude)</label>
+                        <input type="text" id="longitude" name="longitude" placeholder="Enter Longitude*" required>
+    
+                        <label for="areaOfExpertise">Area of Expertise</label>
+                        <select id="areaOfExpertise" name="areaOfExpertise" required>
+                            <option value="">Select Specialization*</option>
+                            <option value="Search and Rescue">Search and Rescue</option>
+                            <option value="Medical Aid">Medical Aid</option>
+                            <option value="Firefighting">Firefighting</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="Others">Others</option>
+                        </select>
+    
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create A Password*" required>
+    
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-Enter The Password*" required>
+                    </div>
+    
+                    <div class="volunteer_innerform">
+                        <label for="availability">Availability</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">Select Availability*</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+    
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="6" placeholder="Additional information or special requirements and Past Experience*"></textarea>
+    
+                        <input type="submit" class="btn" value="Register">
+                        <input type="reset" class="btn" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Volunteer Registration Ends Here  -->
+
+
+
+
+    <!-- Footer Section Starts Here  -->
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer Section Ends Here  -->
+
+
+
+
+
+
+    <script src="/js/res_nav.js"></script>
+
+    <script src="/js/smooth.js"></script>
+
+
+
+</body>
+
+</html>

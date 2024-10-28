@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Section Fragment</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+<!-- Main Section Fragment Starts Here  -->
+<main xmlns:th="http://www.thymeleaf.org" th:fragment="mainFragment" class="main full_width">
+    <section class="main_section content_width">
+        <div class="main_content box2">
+            <h2>Welcome to RakshaMitra</h2>
+            <h2>National Disaster Response Force</h2>
+            <h4>RakshaMitra: Instant Alerts, Immediate Action.</h4>
+            <p>RakshaMitra is your trusted partner in real-time disaster response. With cutting-edge technology, we
+                aggregate and analyze crucial data from multiple sources, ensuring that the right information
+                reaches the right hands at the right time. Our platform empowers disaster management teams to act
+                swiftly and effectively, safeguarding lives and communities.</p>
+            <div class="rd_v_btn">
+                <a th:href="@{/reportDisaster}" class="rbtn">Report Disaster <i
+                        class="fa-solid fa-circle-chevron-right" style="color: #214a91;"></i></a>
+                <a th:href="@{/student/login}" class="rbtn">Become A Volunteer<i
+                        class="fa-solid fa-circle-chevron-right" style="color: #214a91;"></i> </a>
+            </div>
+            
+        </div>
+
+        <div class="main_box box2">
+            <div class="t_box">
+                <h3>Find your Local Rescue</h3>
+                <h6>Find your local Rescue, Volunteer, Shelter.</h6>
+                <input type="text" placeholder="Enter Hashtag" required>
+                <p>Get Hashtag</p>
+                <input type="submit">
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Main Section Fragment Ends Here  -->
+
+</body>
+</html>

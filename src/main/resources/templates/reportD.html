@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+
+</head>
+
+
+<body>
+
+    <!-- Header Part Starts Here  -->
+
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+
+    <!-- Header Part Ends Here  -->
+
+
+    <!-- Report Disaster Section Starts Here  -->
+
+    <section class="reportd full_width">
+        <div class="head_text">
+
+            <h3>Report Disaster</h3>
+        </div>
+        <div class="reportd_container content_width">
+            <div class="report box7">
+                <img th:src="@{/images/report_disaster.png}" alt="">
+            </div>
+            <div class="form box7">
+                <div class="container">
+                    <form id="contactForm">
+                        <h1>Report Live Disaster</h1>
+                        <label for="">Enter Full Name</label>
+                        <input type="text" placeholder="Your Name*" required>
+
+                        <label for="">Enter Contact Number</label>
+                        <input type="text" placeholder="Your Contact*" required>
+
+                        <label for="">Type of Disaster</label>
+                        <select required>
+
+                            <option value="">Choose Disaster Type*</option>
+                            <option value="Flood">Flood</option>
+                            <option value="Cyclone">Cyclone</option>
+                            <option value="Earthquake">Earthquake</option>
+                            <option value="Drought">Drought</option>
+                            <option value="Landslide">Landslide</option>
+                            <option value="Heatwave">Heatwave</option>
+                            <option value="Tsunami">Tsunami</option>
+                            <option value="Hailstorm">Hailstorm</option>
+                            <option value="VolcanicEruption">VolcanicEruption</option>
+                            <option value="IndustrialAccident">IndustrialAccident</option>
+                            <option value="OilSpill">OilSpill</option>
+                            <option value="NuclearAccident">NuclearAccident</option>
+                            <option value="TerroristAttack">TerroristAttack</option>
+                            <option value="BuildingCollapse">BuildingCollapse</option>
+                            <option value="TransportationAccident">TransportationAccident</option>
+                            <option value="CivilUnrest">CivilUnrest</option>
+                        </select>
+
+                        <label for="">Description</label>
+                        <textarea rows="5" cols=""  id="" required placeholder="Your Message*"></textarea>
+
+
+                        <span id="fileNameDisplay">No Image Captured</span>
+                        <button type="button" class="custom-btn" id="openCamera">Capture Image</button>
+                        <input type="file" id="cameraInput" accept="image/*" capture="environment">
+
+                           <script>
+        // Check if the device is mobile
+        const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
+
+        const cameraInput = document.getElementById('cameraInput');
+        const openCameraButton = document.getElementById('openCamera');
+        const fileNameDisplay = document.getElementById('fileNameDisplay');
+
+        openCameraButton.addEventListener('click', function() {
+            if (isMobileDevice) {
+                // Trigger the camera input on mobile
+                cameraInput.click();
+            } else {
+                alert("This feature is available only on mobile devices.");
+            }
+        });
+
+        // Update the label when an image is captured
+        cameraInput.addEventListener('change', function() {
+            if (cameraInput.files.length > 0) {
+                // Display the name of the selected image file
+                fileNameDisplay.textContent = cameraInput.files[0].name;
+            }
+        });
+    </script>
+
+    <label for="">Enter OTP</label>
+    <input type="text" name="" id="" required placeholder="Enter OTP Received On Your Mobile ">
+    <button type="button" class="custom-btn" >Get OTP</button>
+
+<div class="last_btn">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</div>
+
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Report Disaster Section Ends Here  -->
+
+
+    <!-- Footer Section Starts Here  -->
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer Section Ends Here  -->
+
+
+
+
+
+
+
+
+
+    <script src="/js/res_nav.js"></script>
+
+    <script src="/js/smooth.js"></script>
+
+
+
+</body>
+
+</html>

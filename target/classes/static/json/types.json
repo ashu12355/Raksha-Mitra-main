@@ -1,0 +1,8 @@
+{
+    "types": [
+        "Flood", "Cyclone", "Earthquake", "Drought", "Landslide", "Heatwave",
+        "Tsunami", "Hailstorm", "VolcanicEruption", "IndustrialAccident",
+        "OilSpill", "NuclearAccident", "TerroristAttack", "BuildingCollapse",
+        "TransportationAccident", "CivilUnrest"
+    ]
+}

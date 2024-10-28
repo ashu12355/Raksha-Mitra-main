@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.full_width {
+    width: 100%;
+}
+
+.content_width {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+
+/* ************************************************************* */
+
+/* Main Section Starts Here */
+.main {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('/images/Home_img.jpg');
+    background-size: 100% 100%;
+    border: 5px solid #61ce70;
+}
+
+.main .main_section {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+.main .main_section .box2 {
+    flex: 1;
+    height: auto;
+    padding: 20px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    max-width: 600px;
+}
+
+.main .main_section .main_content h2 {
+    color: #f6e2b9;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.main .main_section .main_content h4 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.main .main_section .main_content p {
+    color: #fff;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+.main .main_section .main_content .rd_v_btn {
+    display: flex;
+    float: left;
+    gap: 50px;
+}
+
+.main .main_section .main_content .rbtn {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffac4d;
+    margin: 0 auto;
+    padding: 12px 25px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.main .main_section .main_content .rbtn i {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.main .main_section .main_content .rbtn:hover {
+    background-color: #45c94b;
+    color: #fff;
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+}
+
+.main .main_section .main_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main .main_section .main_box .t_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    padding: 70px 55px;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.main .main_section .main_box h3,
+h6,
+p {
+    color: #fff;
+}
+
+.main .main_section .main_box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.main .main_section .main_box h6 {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.main .main_section .main_box p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.main .main_section .main_box input {
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 15px 25px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.main .main_section .main_box input::placeholder {
+    font-weight: 800;
+}
+
+.main .main_section .main_box input:last-child {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #f6e2b9;
+}
+
+/* Main Section Ends Here */
+
+/* Responsive Design of Main Section 760px Starts Here  */
+
+@media (max-width:760px) {
+    
+    .main .main_section {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    
+    .main .main_section .box2 {
+        min-width: 100%;
+        margin: 0 0;
+        padding: 10px;
+    }
+    
+    .main .main_section .main_content h2 {
+        font-size: 25px;
+    }
+    
+    .main .main_section .main_content h4 {
+        font-size: 18px;
+    }
+    
+    .main .main_section .main_content p {
+        font-size: 18px;
+    }
+    
+    .main .main_section .main_content .rd_v_btn {
+        float: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main .main_section .main_box .t_box {
+        width: 100%;
+        padding: 70px 5px;
+    }
+}
+/* Responsive Design of Main Section 760px Ends Here  */
+
+/* ******************************************************************* */
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Admin Dashboard</title>
+  
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .user-profile {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    /* Cards Section */
+    .cards {
+      display: flex;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Notification</a></li>
+        <li><a href="#">Disaster Data</a></li>
+        <li><a href="/admin/students/pending">Approve Volunteers</a></li>
+        <li><a href="/admin/approve_agencies">Approve Rescue Agencies</a></li>
+        <li><a href="/admin/logout">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Dashboard</h1>
+        <div class="user-profile">
+          <p>Welcome, Admin</p>
+        </div>
+      </header>
+
+      <!-- Dashboard Cards -->
+      <section class="cards">
+        <div class="card">
+          <h3>Emergecy service</h3>
+          <p>120</p>
+        </div>
+        <div class="card">
+          <h3>Total Rescue Agency</h3>
+          <p>45</p>
+        </div>
+        <div class="card">
+          <h3>Total Disaster</h3>
+          <p>32</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

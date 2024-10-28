@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+    <!-- <link rel="stylesheet" href="css/loader.css"> -->
+
+</head>
+
+
+<body>
+
+    <!-- Header Part Starts Here  -->
+
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+    <!-- Header Part Ends Here  -->
+
+    <!-- Rescue Agency Login Starts Here  -->
+
+    <section class="rescue_logform full_width">
+        <div class="rescue_login_head">
+            <h1>Rescue Agency Login</h1>
+
+        </div>
+        <div class="rescue_logform_container content_width">
+            <div class="rescue_l_logo box12">
+                <img th:src="@{/images/Login_Rescue_Agency.png}" alt="">
+            </div>
+            <div class="rescue_l_form box12">
+                <div class="ll">
+                    <img th:src="@{/images/l_logo.png}" alt="">
+                </div>
+
+                <p th:if="${message}" style="color: green;">[[${message.content}]]</p>
+
+
+                <form method="post" action="/college/login">
+                    <label for="">Enter Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email*" required autocomplete="off"> <br>
+                    <label for="">Enter Your Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password*" required
+                        autocomplete="off"> <br>
+
+                    <a href="">
+                        <h3>Forgot Password?</h3>
+                    </a>
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button><br>
+                    <a th:href="@{/college/register}">
+                        <h3 class="naccount">New? Create an Account</h3>
+                    </a>
+                </form>
+                <!-- Display error message if it exists -->
+                <div th:if="${error}" class="error-message" style="color:red;">
+                    <p th:text="${error}"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rescue Agency Login Ends Here  -->
+
+
+    <!-- Footer Section Starts Here  -->
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+    <!-- Footer Section Ends Here  -->
+
+
+
+
+
+
+    <script src="/js/res_nav.js"></script>
+
+    <script src="/js/smooth.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+        <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+
+</head>
+
+
+<body>
+
+    <!-- Header Section Starts Here -->
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+    <!--  Header Section Ends Here -->
+   
+    
+    <!-- Hashtag Generation  Section Starts Here  -->
+
+    <section class="hashpage full_width">
+        <div class="head_text">
+
+            <h3>Disaster Hashtag Generator</h3>
+        </div>
+        <div class="hashpage_container content_width">
+            <div class="hash box6">
+                <img th:src="@{/images/lefthasg.png}" alt="">
+            </div>
+            <div class="form box6">
+                <div class="container">
+                    <form id="contactForm">
+                        <h1>Disaster Hashtag Generator</h1>
+                        <label for="">Choose State</label>
+                        <select id="stateSelect">
+                            <option value="">Choose Your State</option>
+                        </select>
+                        <label for="">Choose District</label>
+                        <select id="districtSelect" disabled>
+                            <option value=""> Choose Your District</option>
+                        </select>
+                        <label for="">Choose Sub-District</label>
+                        <select id="subDistrictSelect" disabled>
+                            <option value="">Choose Your Sub-District</option>
+                        </select>
+                        <label for="">Choose Disaster Type</label>
+                        <select id="typeSelect">
+                            <option value="">Choose Your Disaster Type</option>
+                        </select>
+                        <button id="submitBtn">Generate Hashtags</button>
+                        <h3>Your Hashtag: </h3> <br>
+                       
+                        <div class="results" id="results">
+                           
+                        </div> 
+
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Hashtag Generation Section Ends Here  -->
+
+
+  
+
+    <!-- Footer Section Starts Here  -->
+
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer Section Ends Here  -->
+
+
+
+
+    <script src="../js/res_nav.js"></script>
+    <script src="../js/ghash.js"></script>
+    <script src="../js/smooth.js"></script>
+
+</body>
+
+</html>

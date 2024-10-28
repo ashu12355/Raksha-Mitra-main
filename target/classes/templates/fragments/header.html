@@ -1,0 +1,69 @@
+<!-- fragments/header.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Header Fragment</title>
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    
+</head>
+<body>
+
+<!-- Header Part Starts Here  -->
+<header  xmlns:th="http://www.thymeleaf.org" th:fragment="headerFragment" class="header1 full_width">
+    <div class="container content_width">
+        <p><span>RakshaMitra:</span> Instant Alerts, Immediate Action.</p>
+        <div class="header_social">
+            <a href="" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+            </a>
+            <a href="" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            </a>
+            <a href="" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+            </a>
+            <a href="" target="_blank" aria-label="YouTube">
+                <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<header class="header2 full_width" th:fragment="headerFragment">
+    <div class="container content_width">
+        <div class="logo box1">
+            <img th:src="@{/images/Logo_Main.png}" alt="" class="bl_logo">
+        </div>
+
+        <div class="menu box1">
+            <nav class="nav">
+                <ul id="menulist">
+                    <li><a th:href="@{/}">Home</a></li>
+                    <!-- Update these links -->
+                    <li><a href="#about_us" class="scroll-link">About</a></li>
+                    <li><a href="#contact_us" class="scroll-link">Contact</a></li>
+                    <li><a href="#">Notice</a></li>
+                    <li><a th:href="@{/ghash}">Generate Hashtag</a></li>
+                    <li><a th:href="@{/login}">Login</a></li>
+                    <li><a href="" class="donate">Donate Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+
+        <div class="mob_menu " onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        
+    </div>
+</header>
+<!-- Header Part Ends Here  -->
+
+
+</body>
+</html>
