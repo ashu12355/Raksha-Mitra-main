@@ -51,7 +51,7 @@ public class NoticeController {
 
     // View Recent Notices for Students
     @GetMapping("/student/notices")
-    public String showStudentNotices(Model model) {
+    public String showAllNotices(Model model) {
         model.addAttribute("notices", noticeService.getAllNotices());  // Show all notices
         return "student_notices";  // Ensure this template exists
     }
