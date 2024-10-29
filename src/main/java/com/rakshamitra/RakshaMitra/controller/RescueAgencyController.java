@@ -47,9 +47,11 @@ public class RescueAgencyController {
     
         RescueAgency agency = rescueAgencyService.findByEmail(email);
         if (agency != null && agency.isApproved() && agency.getPassword().equals(password)) {
+
             // Store the agencyId in the session
             session.setAttribute("agencyId", agency.getId());
-    
+            session.setAttribute("collegeName", agency.getCollegeName());
+            
             return "redirect:/college/dashboard";  // Redirect to the agency dashboard
         }
         model.addAttribute("error", "Invalid credentials or agency not approved.");
