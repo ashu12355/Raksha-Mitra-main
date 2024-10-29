@@ -192,7 +192,7 @@ a{
     <!-- Main Content -->
     <div class="main-content">
       <div class="top-bar">
-        <span>Welcome, college-name</span>
+        <span th:text="'Welcome, ' + ${session.collegeName}">Welcome, College</span>
        <a href="/logout"> <button >Logout</button></a>
       </div>
 
