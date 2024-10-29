@@ -183,7 +183,7 @@ a{
       <h2>College Dashboard</h2>
       <ul>
         <li onclick="showSection('dashboard')">Dashboard</li>
-        <li onclick="showSection('approveCollege')">Approve Students</li>
+        <a href="/college/student/pending"> <li>Approve Students</li>
         <li onclick="showSection('createEvents')">Create Events</li>
         <li onclick="showSection('sendInvitation')">Send Invitation</li>
       </ul>
@@ -221,36 +221,7 @@ a{
 
       <!-- Approved College Section -->
       <div id="approveCollege" class="content-section" style="display: none;">
-        <h1>Pending Volunteer Approvals</h1>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Contact Number</th>
-                    <th>Area of Expertise</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="volunteer : ${pendingVolunteers}">
-                    <td th:text="${volunteer.id}"></td>
-                    <td th:text="${volunteer.fullName}"></td>
-                    <td th:text="${volunteer.email}"></td>
-                    <td th:text="${volunteer.contactNumber}"></td>
-                    <td th:text="${volunteer.areaOfExpertise}"></td>
-                    <td>
-                        <form th:action="@{/college/student/approve/{id}(id=${volunteer.id})}" method="post">
-                            <button type="submit">Approve</button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div>
-            <li><a href="/admin/admin_dashboard">Go to Admin Dashboard</a></li>
-        </div>
+        
       </div>
 
       <!-- Create event Section -->
