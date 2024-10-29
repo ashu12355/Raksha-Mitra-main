@@ -32,7 +32,7 @@ public class NoticeService {
 
         // Send email to all approved volunteers
         String subject = "New Notice: " + notice.getTitle();
-        String content = "A new notice has been posted:\n\n" + notice.getContent();
+        String content = "A new notice has been posted:\n\n" + notice.getDescription();
         mailService.sendMailToVolunteers(subject, content, volunteerEmails);
 
         return savedNotice;

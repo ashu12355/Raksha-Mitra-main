@@ -4,6 +4,8 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDa
 
 import jakarta.persistence.Entity;
 import java.time.LocalDate;
+import java.time.LocalTime;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,51 +29,22 @@ public class Notice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String eventName;
+    private String eventType;
+    private String organizer;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private LocalTime startTime; 
+    private LocalTime endTime; 
     private String title;
-    private String content;
-    private LocalDate date;
-
+    private String address;
+    private String registrationLink;
+    private String description;
+    private Double registrationFee;
+   
     private Long agencyId; // Reference to the rescue agency (college)
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public Long getAgencyId() {
-        return agencyId;
-    }
-
-    public void setAgencyId(Long agencyId) {
-        this.agencyId = agencyId;
-    }
-
-    
+   
 }

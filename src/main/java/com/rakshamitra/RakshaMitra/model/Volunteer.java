@@ -19,6 +19,7 @@ public class Volunteer {
     private LocalDate dob;
     private String gender;
     private String email;
+    private String collegename;
     private String areaOfExpertise;
     private String password;
     private String confirmPassword;
@@ -91,6 +92,14 @@ public class Volunteer {
     public void setApproved(boolean isApproved) {
         this.isApproved = isApproved;
     }
+    public String getCollegename() {
+        return collegename;
+    }
+    public void setCollegename(String collegename) {
+        this.collegename = collegename;
+    }
+
+    
 
     
     
