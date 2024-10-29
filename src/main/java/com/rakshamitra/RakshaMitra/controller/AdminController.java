@@ -27,5 +27,13 @@ public class AdminController {
         model.addAttribute("agencies", rescueAgencyService.findAllPendingAgencies());
         return "admin_approve_agencies"; // View that lists pending agencies
     }
+    @GetMapping("/about_us")
+    public String showAboutUsPage() {
+        return "about_us"; // Show login page
+    }
+    @GetMapping("/contact_us")
+    public String showContactUsPage() {
+        return "contact_us"; // Show login page
+    }
 
 }
