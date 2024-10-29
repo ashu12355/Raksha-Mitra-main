@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title th:text="${title}">RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+
+</head>
+<body>
+
+    <!-- Header Section Starts Here -->
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+
+
+     <!-- About Us Section Starts Here  -->
+
+
+     <section class="mission full_width" id="about_us">
+        <div class="mission_Header">
+            <h1>About Us</h1>
+        </div>
+        <div class="mission_container content_width">
+            <div class="mission_img box3">
+                <img th:src="@{/images/about_us_Logo.png}" alt="">
+            </div>
+            <div class="mission_desc box3">
+                <h3>~~ Our Mission ~~</h3>
+                <h4>Empowering Innovation Across Campuses"</h4>
+                <div class="list">
+                    <div class="line">
+                        <i class="fa-solid fa-circle-check" style="color: #5e2fe9;"></i>
+                        <p>Empowering students and colleges through a collaborative platform for tech-focused events, bridging gaps and fostering a community of learning, innovation, and networking.
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <h3>~~ Our Vision ~~</h3>
+                <h4>Building the Future of Intercollege Collaboration</h4>
+                <div class="list">
+
+                    <div class="line">
+                        <i class="fa-solid fa-circle-check" style="color: #d98320;"></i>
+                        <p>To be the premier hub for intercollege tech engagement, where every tech enthusiast can access events and resources, creating a connected academic ecosystem for growth and innovation.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section Ends Here   -->
+
+
+    
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer Section Ends Here  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/res_nav.js"></script>
+    <script src="/js/smooth.js"></script>
+
+</body>
+
+</html>

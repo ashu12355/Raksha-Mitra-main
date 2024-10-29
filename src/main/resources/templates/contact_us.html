@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title th:text="${title}">RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+
+</head>
+<body>
+
+    <!-- Header Section Starts Here -->
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+
+
+  
+
+<!-- Contact Us Section Starts Here  -->
+
+<section class="mapform full_width" id="contact_us">
+    <div class="contact_head">
+        <h1 >Contact Us</h1>
+
+    </div>
+    <div class="mapform_container content_width">
+        <div class="map box5">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.030736298585!2d85.80517887523801!3d20.340348881142273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190902b2a59ce5%3A0xdfb554a4e0bafffb!2sTrident%20Academy%20of%20Technology!5e0!3m2!1sen!2sin!4v1723055793121!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="form box5">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <h2>Have Questions <br> Get in Touch!</h2>
+                <input type="hidden" name="access_key" value="79ee9c64-b36c-4e8e-8efb-a0c3ac094901">
+                <input type="text" id="name" name="name" placeholder="Name*" required autocomplete="off"> <br>
+                <input type="email" id="email" name="email" placeholder="Email*" required autocomplete="off"> <br>
+                <input type="text" id="phone" name="phone" placeholder="Phone*" required autocomplete="off"> <br>
+                <textarea id="message" name="message" rows="5" cols="30" placeholder="Your Message*" required autocomplete="off"></textarea>
+                <br>
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+        
+
+    </div>
+</section>
+
+<div id="loadingOverlay">
+    <div class="loadingText">Loading...</div>
+</div>
+
+<!-- Custom Popup -->
+<div id="formSubmissionPopup" class="popupOverlay">
+<div class="popupContent">
+    <p id="popupMessageText"></p>
+    <button id="popupCloseButton">OK</button>
+</div>
+</div>
+
+  <!-- Contact Us Section Ends Here  -->
+
+
+    
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer Section Ends Here  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/res_nav.js"></script>
+    <script src="/js/smooth.js"></script>
+
+</body>
+
+</html>

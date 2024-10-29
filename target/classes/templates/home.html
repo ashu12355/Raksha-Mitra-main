@@ -21,7 +21,55 @@
 
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
-
+    <style>
+    /* Dashboard Boxes */
+    .dashboard-box {
+      display: flex;
+      gap: 20px;
+      margin: 20px;
+    }
+    
+    #dashboard h2{
+      text-align:center;
+      margin-top:25px; 
+      font-size:35px;     
+    }
+    
+    .box {
+      flex: 1;
+      padding: 17px;
+      background-color: #f4f4f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: start;
+    }
+    .box-bg-red{
+      background-color: rgb(183, 158, 234);
+    }
+    .box-bg-green{
+      background-color: greenyellow;
+    }
+    .box h3 {
+      margin-bottom: 10px;
+    }
+    
+    .box p {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .box button{
+        font-size:15px;
+        padding:7px;
+        cursor:pointer;
+        margin-top:15px;
+        color:black;
+    }
+    .box button:hover{
+        background-color:blue;
+        color:white;
+    }
+    
+      </style>
 </head>
 
 <body>
@@ -39,244 +87,40 @@
 
      <!-- *************************************  -->
 
-     <!-- About Us Section Starts Here  -->
+     
 
-
-     <section class="mission full_width" id="about_us">
-        <div class="mission_Header">
-            <h1>About Us</h1>
+<div class="full_width"> 
+     <div id="dashboard" class="content-section content_width">
+        <h2>Explore Events</h2>
+        <div class="dashboard-box">
+          <div class="box box-bg-red">
+            <h3>Hackathon 2024</h3>
+            <p id="approvedCollegeCount">Date: Nov 15, 2024</p>
+            <p>Organizer: Tech University</p>
+            <button>Register Now</button>
+          </div>
+          <div class="box box-bg-green">
+            <h3>MSME Hackathon 2024</h3>
+            <p id="approvedCollegeCount">Date: Jan 15, 2025</p>
+            <p>Organizer: Tech University</p>
+            <button>Register Now</button>
+          </div>
+          <div class="box box-bg-red">
+            <h3>IEEE Bootcamp 2024</h3>
+            <p id="approvedCollegeCount">Date: Dec 15, 2024</p>
+            <p>Organizer: Tech University</p>
+            <button>Register Now</button>
+          </div>
+          <div class="box box-bg-green">
+            <h3>Trithon Triplets 2024</h3>
+            <p id="approvedCollegeCount">Date: Feb 15, 2025</p>
+            <p>Organizer: Tech University</p>
+            <button>Register Now</button>
+          </div>
         </div>
-        <div class="mission_container content_width">
-            <div class="mission_img box3">
-                <img th:src="@{/images/about_us_Logo.png}" alt="">
-            </div>
-            <div class="mission_desc box3">
-                <h3>~~ Our Mission ~~</h3>
-                <h4>Empowering Innovation Across Campuses"</h4>
-                <div class="list">
-                    <div class="line">
-                        <i class="fa-solid fa-circle-check" style="color: #5e2fe9;"></i>
-                        <p>Empowering students and colleges through a collaborative platform for tech-focused events, bridging gaps and fostering a community of learning, innovation, and networking.
-                        </p>
-                    </div>
-                </div>
-
-                <br>
-                <br>
-
-                <h3>~~ Our Vision ~~</h3>
-                <h4>Building the Future of Intercollege Collaboration</h4>
-                <div class="list">
-
-                    <div class="line">
-                        <i class="fa-solid fa-circle-check" style="color: #d98320;"></i>
-                        <p>To be the premier hub for intercollege tech engagement, where every tech enthusiast can access events and resources, creating a connected academic ecosystem for growth and innovation.</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section Ends Here   -->
-
-    <!-- Team Section Starts Here  -->
-
-    <section class="team full_width">
-        <div class="team_head">
-            <h1 >Team</h1>
-
-        </div>
-        <h3 class="heading2">Meet Our Team</h3>
-        <div class="team_container content_width ">
-
-
-        <div class="team_member box4">
-            <div class="team_m_img">
-                <img th:src="@{/images/Team/AKB.png}" alt="">
-            </div>
-            <h3>Amit Kumar Barik</h3>
-            <h5>Team Leader, Full Stack Java Developer <br> CSE, Final Year</h5>
-            <div class="team_social">
-                <a href="https://www.linkedin.com/in/amit-kumar-barik" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
-                </a>
-
-                <a href="https://www.instagram.com/amitkumar08_" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-instagram" style="color: #c32aa3;"></i>
-                </a>
-
-                <a href="https://www.facebook.com/profile.php?id=100004638578072" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                </a>
-
-                <a href="https://x.com/AmitKumarB84378" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-x-twitter" style="color: #1da1f2;"></i>
-                </a>
-
-                <a href="https://wa.me/7787849026?text=Hello" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-whatsapp" style="color: #25d366;"></i>
-                </a>
-
-            </div>
-        </div>
-       
-            
-        
-            <div class="team_member box4">
-                <div class="team_m_img">
-                    <img th:src="@{/images/Team/SKB.png}" alt="">
-                </div>
-                <h3>Santos Kumar Biswal </h3>
-                <h5>Member, Frontend Developer<br> CS-AIML, Final Year</h5>
-                <div class="team_social">
-                    <a href="" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-instagram" style="color: #c32aa3;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                    </a>
-
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-x-twitter" style="color: #1da1f2;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-whatsapp" style="color: #25d366;"></i>
-                    </a>
-
-
-                </div>
-            </div>
-
-            <div class="team_member box4">
-                <div class="team_m_img">
-                    <img th:src="@{/images/Team/AS.png}" alt="">
-                </div>
-                <h3>Ashutosh Sharma</h3>
-                <h5>Member, Full Stack Java Developer <br> CSE, Final Year</h5>
-                <div class="team_social">
-                    <a href="" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-instagram" style="color: #c32aa3;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-x-twitter" style="color: #1da1f2;"></i>
-                    </a>
-
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-whatsapp" style="color: #25d366;"></i>
-                    </a>
-
-                </div>
-            </div>
-
-
-           
-
-            <div class="team_member box4">
-                <div class="team_m_img">
-                    <img th:src="@{/images/Team/APK.png}" alt="">
-                </div>
-                <h3>Aditya Prasad khadanga </h3>
-                <h5>Member, Backend Developer (Python)<br> CSE, Pre-Final Year</h5>
-                <div class="team_social">
-                    <a href="" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-instagram" style="color: #c32aa3;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                    </a>
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-x-twitter" style="color: #1da1f2;"></i></a>
-
-
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-whatsapp" style="color: #25d366;"></i>
-                    </a>
-
-                </div>
-            </div>
-
-         
-
-        </div>
-    </section>
-
-    <!-- Team Section Ends Here  -->
-
-
-<!-- Contact Us Section Starts Here  -->
-
-<section class="mapform full_width" id="contact_us">
-    <div class="contact_head">
-        <h1 >Contact Us</h1>
-
+      </div>
     </div>
-    <div class="mapform_container content_width">
-        <div class="map box5">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.030736298585!2d85.80517887523801!3d20.340348881142273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190902b2a59ce5%3A0xdfb554a4e0bafffb!2sTrident%20Academy%20of%20Technology!5e0!3m2!1sen!2sin!4v1723055793121!5m2!1sen!2sin"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="form box5">
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <h2>Have Questions <br> Get in Touch!</h2>
-                <input type="hidden" name="access_key" value="79ee9c64-b36c-4e8e-8efb-a0c3ac094901">
-                <input type="text" id="name" name="name" placeholder="Name*" required autocomplete="off"> <br>
-                <input type="email" id="email" name="email" placeholder="Email*" required autocomplete="off"> <br>
-                <input type="text" id="phone" name="phone" placeholder="Phone*" required autocomplete="off"> <br>
-                <textarea id="message" name="message" rows="5" cols="30" placeholder="Your Message*" required autocomplete="off"></textarea>
-                <br>
-                <button type="submit">Send</button>
-                <button type="reset">Reset</button>
-            </form>
-        </div>
-        
 
-    </div>
-</section>
-
-<div id="loadingOverlay">
-    <div class="loadingText">Loading...</div>
-</div>
-
-<!-- Custom Popup -->
-<div id="formSubmissionPopup" class="popupOverlay">
-<div class="popupContent">
-    <p id="popupMessageText"></p>
-    <button id="popupCloseButton">OK</button>
-</div>
-</div>
-
-  <!-- Contact Us Section Ends Here  -->
 
 
 
