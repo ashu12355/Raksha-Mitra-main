@@ -568,8 +568,9 @@ font-size: 35px;
  /* Admin Page Starts Here  */
 
 .logform {
-    background-color: #e0e0e0;
-}
+    background: rgb(32,0,36);
+    background: linear-gradient(135deg, rgba(32,0,36,1) 0%, rgba(3,17,45,1) 0%, rgba(9,121,52,1) 35%, rgba(0,212,255,1) 100%);}
+
 .logform .login_head{
     background:#19485f;
     border: 5px solid #f6e2b9;
