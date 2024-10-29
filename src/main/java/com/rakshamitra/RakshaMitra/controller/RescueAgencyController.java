@@ -39,14 +39,23 @@ public class RescueAgencyController {
     }
 
     @PostMapping("/college/login")
-    public String agencyLogin(String email, String password, Model model) {
+    public String agencyLogin(
+            @RequestParam String email, 
+            @RequestParam String password, 
+            Model model, 
+            HttpSession session) {
+    
         RescueAgency agency = rescueAgencyService.findByEmail(email);
         if (agency != null && agency.isApproved() && agency.getPassword().equals(password)) {
-            return "agency_dashboard";
+            // Store the agencyId in the session
+            session.setAttribute("agencyId", agency.getId());
+    
+            return "redirect:/college/dashboard";  // Redirect to the agency dashboard
         }
         model.addAttribute("error", "Invalid credentials or agency not approved.");
-        return "rescue_agency_login";
+        return "rescue_agency_login";  // Redirect to login page on failure
     }
+    
 
     @GetMapping("/college/register")
     public String showAgencyRegistrationPage(Model model) {
@@ -127,6 +136,8 @@ public class RescueAgencyController {
         }
         return "agency_dashboard";
     }
+    
 
+  
 
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Notices</title>
+</head>
+<body>
+    <h1>Recent Notices</h1>
+
+    <ul>
+        <th:block th:each="notice : ${notices}">
+            <li>
+                <strong th:text="${notice.title}"></strong><br>
+                <p th:text="${notice.content}"></p>
+                <em th:text="${notice.date}"></em>
+            </li>
+        </th:block>
+    </ul>
+</body>
+</html>
