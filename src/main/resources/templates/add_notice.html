@@ -4,17 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Notice</title>
+ <link rel="stylesheet" th:href="@{/css/styles.css}">
+ <link rel="stylesheet" th:href="@{/css/style.css}">
+ <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
 </head>
 <body>
-    <h1>Add Notice/Event</h1>
+    <section class="volunteer_regform full_width">
+        <div class="volunteer_lreg_head">
+            <h1>Add Notice/Event</h1>
+        </div>
+    
+        <div class="volunteer_regform_container content_width">
+            
+    
+            <div class="volunteer_reg_form box15">
     <form action="/college/notice/add" method="POST">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required><br><br>
+        <div class="volunteer_innerform">
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName" placeholder="Enter Your Full Name*" required>
 
-        <label for="content">Content:</label>
-        <textarea id="content" name="content" rows="5" required></textarea><br><br>
+            <label for="eventType">Event Type</label>
+            <input type="text" id="eventType" name="eventType" placeholder="Enter Your Full Name*" required>
 
-        <button type="submit">Submit Notice</button>
+            <label for="gender">Select Event</label>
+            <select id="eventType" name="eventType" required>
+                <option value="">Select Event Type</option>
+                <option value="hackathon">Hackathon</option>
+                <option value="bootcamp">BootCamp</option>
+                <option value="seminar">Seminar</option>
+                <option value="workshop">Workshop</option>
+                <option value="coding_contest">Coding Contest</option>
+            </select>
+            <label for="organizer">Organizer</label>
+            <input type="text" id="organizer" name="organizer" required>        
+
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" required>
+           
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" name="endDate" required>
+           </div>
+
+        <div class="volunteer_innerform">
+            
+
+                 
+ <!-- Date and Time -->
+
+
+ <label for="startTime">Start Time</label>
+ <input type="time" id="startTime" name="startTime" required>
+
+ <label for="endTime">End Time</label>
+ <input type="time" id="endTime" name="endTime" required>
+ <label for="address">Address</label>
+ <textarea id="address" name="address" rows="2"></textarea>
+ <label for="description">Description</label>
+ <textarea id="description" name="description" rows="6" placeholder="Additional information or special requirements and Past Experience*"></textarea>
+
+        </div>
+
+        <div class="volunteer_innerform">
+                <label for="registrationLink">Registration Link</label>
+            <input type="url" id="registrationLink" name="registrationLink" placeholder="https://..." required>
+
+            <label for="registrationFee">Registration Fee (₹)</label>
+            <input type="number" id="registrationFee" name="registrationFee" min="0" required>
+            <input type="submit" class="btn" value="Register">
+            <input type="reset" class="btn" value="Reset">
+        </div>
     </form>
+</div>
+    </div>
+    
 </body>
 </html>
